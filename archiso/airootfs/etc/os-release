@@ -1,0 +1,7 @@
+NAME=DarkOs
+ID=darkos
+ID_LIKE="arch"
+VERSION_ID=v10.0
+ANSI_COLOR="0;36"
+HOME_URL="https://darkos-arch.sourceforge.io"
+SUPPORT_URL="https://darkos-arch.sourceforge.io"

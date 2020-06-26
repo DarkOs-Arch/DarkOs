@@ -1,0 +1,3 @@
+This Is DarkOs Build Files, It has a list of configuration files and extra script to create a minimal good looking distro .
+There's package.x86_64 contains a list of dependencies and software that will be included in the os .
+

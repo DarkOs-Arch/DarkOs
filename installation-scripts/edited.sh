@@ -78,7 +78,7 @@ tput setaf 2;echo "Phase 3 : Making sure we start with a clean slate";tput sgr0
 echo "################################################################## "
 echo
 echo "Deleting the build folder if one exists - takes some time"
-[ -d $buildFolder ] && sudo rm -rf $buildFolder
+#[ -d $buildFolder ] && sudo rm -rf $buildFolder
 
 
 echo
@@ -87,11 +87,11 @@ tput setaf 2;echo "Phase 4 : Moving files to build folder";tput sgr0
 echo "################################################################## "
 echo
 echo "Copying files and folder to build folder"
-sudo cp -r ../../DarkOs-Iso $buildFolder
+#sudo cp -r ../../DarkOs-Iso $buildFolder
 
-sudo chmod 750 $buildFolder/archiso/airootfs/etc/sudoers.d
-sudo chmod 750 $buildFolder/archiso/airootfs/etc/polkit-1/rules.d
-sudo chgrp polkitd $buildFolder/archiso/airootfs/etc/polkit-1/rules.d
+#sudo chmod 750 $buildFolder/archiso/airootfs/etc/sudoers.d
+#sudo chmod 750 $buildFolder/archiso/airootfs/etc/polkit-1/rules.d
+#sudo chgrp polkitd $buildFolder/archiso/airootfs/etc/polkit-1/rules.d
 
 echo
 echo "################################################################## "
@@ -130,4 +130,4 @@ tput setaf 2;echo "Phase 8 : Making sure we start with a clean slate next time";
 echo "################################################################## "
 echo
 echo "Deleting the build folder if one exists - takes some time"
-#[ -d $buildFolder ] && sudo rm -rf $buildFolder
+[ -d $buildFolder ] && sudo rm -rf $buildFolder

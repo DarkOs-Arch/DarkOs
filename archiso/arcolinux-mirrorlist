@@ -1,0 +1,3 @@
+#######################################################
+Server = https://bike.seedhost.eu/arcolinux/$repo/$arch
+Server = https://arcolinux.github.io/$repo/$arch
