@@ -122,7 +122,7 @@ tput setaf 2;echo "Phase 7 : Copying the iso to out folder";tput sgr0
 echo "################################################################## "
 echo
 [ -d  $outFolder ] || mkdir $outFolder
-cp $buildFolder/archiso/out/DarkOs* $outFolder
+cp $buildFolder/archiso/out/darkos* $outFolder
 
 echo
 echo "################################################################## "
@@ -130,4 +130,4 @@ tput setaf 2;echo "Phase 8 : Making sure we start with a clean slate next time";
 echo "################################################################## "
 echo
 echo "Deleting the build folder if one exists - takes some time"
-#[ -d $buildFolder ] && sudo rm -rf $buildFolder
+[ -d $buildFolder ] && sudo rm -rf $buildFolder

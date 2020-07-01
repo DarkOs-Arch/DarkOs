@@ -3,10 +3,10 @@
 set -e -u
 
 iso_name=darkos
-iso_label="darkos-v10"
+iso_label="darkos-07-2020"
 iso_publisher="DarkOs <https://darkos-arch.sourceforge.io>"
 iso_application="DarkOs Live/DVD"
-iso_version="v10"
+iso_version="07-2020"
 install_dir=arch
 work_dir=work
 out_dir=out

@@ -11,7 +11,7 @@ broadcom-wl
 btrfs-progs
 clonezilla
 crda
-darkhttpd
+#darkhttpd
 ddrescue
 dhclient
 #dhcpcd
@@ -199,18 +199,18 @@ udisks2
 xdg-user-dirs
 
 ###printers
-cups
-cups-filters
-cups-pdf
-cups-pk-helper
-ghostscript
-gsfonts
-gtk3-print-backends
-gutenprint
-libcups
-#hplip
-splix
-system-config-printer
+#cups
+#cups-filters
+#cups-pdf
+#cups-pk-helper
+#ghostscript
+#gsfonts
+#gtk3-print-backends
+#gutenprint
+#libcups
+##hplip
+#splix
+#system-config-printer
 
 ###tumbler
 tumbler
@@ -303,6 +303,7 @@ dconf-editor
 expac
 file-roller
 #filezilla
+neovim
 git
 #gksu
 #glances
@@ -440,7 +441,7 @@ grub-customizer
 hardcode-fixer-git
 inxi
 mintstick-git
-neofetch
+#neofetch
 #numix-gtk-theme-git
 pamac-aur
 #peek
@@ -482,13 +483,13 @@ darkos-systemd
 darkos-tweaks
 darkos-ascii
 darkos-system-config
-
-
+darkos-neofetch
+darkos-lightdm
 arcolinux-grub-theme-vimix-git
 #arcolinux-keyring
-arcolinux-lightdm-gtk-greeter-plasma
+#arcolinux-lightdm-gtk-greeter-plasma
 arcolinux-lightdm-gtk-greeter-settings
-
+#arcolinux-betterlockscreen-git
 
 ###########################################################################
 #                                CALAMARES DEPENDENCIES
@@ -547,7 +548,7 @@ lightdm
 #lxrandr
 # thunar
 # thunar-volman
-tumbler
+#tumbler
 # thunar-archive-plugin
 # thunar-media-tags-plugin
 
@@ -571,23 +572,23 @@ dolphin-plugins
 kde-gtk-config
 ark
 ffmpegthumbs
-
+konsole
 # Groups
 # https://www.archlinux.org/groups/
 
-kde-applications-meta
-kde-accessibility-meta
+#kde-applications-meta
+#kde-accessibility-meta
 #kde-development-environment-meta
 kde-system-meta
 cryfs
-kate
-kdenetwork-filesharing
+#kate
+#kdenetwork-filesharing
 #kde-education-meta
 #kde-games-meta
 #kde-graphics-meta
 #kde-multimedia-meta
-kde-network-meta
-kde-pim-meta
+#kde-network-meta
+#kde-pim-meta
 #kde-sdk-meta
 #kde-utils-meta
 #kde-webdev-meta
