@@ -1,11 +1,8 @@
-# Exporting QT Style 
-export QT_STYLE_OVERRIDE=KvArcDark
-
 # Including Local Bin Tool In The Path
 PATH="$HOME/.local/bin${PATH:+:${PATH}}"
 
-# Setting Editor As Vim
-EDITOR="vim"
+# Setting Editor As NeoVim
+EDITOR="nvim"
 
 # Exporting Term Colors To Xterm 
 # Note: For Better Colors Change To "st-256color" if you have st installed
@@ -153,38 +150,38 @@ ex ()
 alias ..='cd ..' 
 alias ...='cd ../..'
 # vim
-#alias vim=nvim
+alias vim=nvim
 
 # broot
 alias br='br -dhp'
 alias bs='br --sizes'
 
 #Source .bashrc
-alias sr='source .bashrc'
+alias sr='source ~/.bashrc'
 
 # Changing "ls" to "exa"
-#alias ll='exa -al --color=always --group-directories-first' # my preferred listing
-#alias la='exa -a --color=always --group-directories-first'  # all files and dirs
-#alias ls='exa -l --color=always --group-directories-first'  # long format
-#alias lt='exa -aT --color=always --group-directories-first' # tree listing
-#alias l="ls"
-alias ls='ls --color=auto'
-alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
+alias ll='exa -al --color=always --group-directories-first' # my preferred listing
+alias la='exa -a --color=always --group-directories-first'  # all files and dirs
+alias ls='exa -l --color=always --group-directories-first'  # long format
+alias lt='exa -aT --color=always --group-directories-first' # tree listing
+alias l="ls"
+#alias ls='ls --color=auto'
+#alias ll='ls -alF'
+#alias la='ls -A'
+#alias l='ls -CF'
 
 # yay shortcuts
 alias src='yay -Ss'
 alias ins='yay -S'
 alias up='yay -Sy'
 alias upd='yay -Syu'
-
+alias rms='yay -R'
 # Saving Time Typing 
 alias gic='git clone' 
 alias pg='ping'   # Extra
 
 # Overwrite .Xresources To take effect of the new settings
-alias xd='xrdb .Xresources'
+alias xd='xrdb ~/.Xresources'
 
 # adding flags
 alias cp="cp -i"                          # confirm before overwriting something
@@ -230,5 +227,5 @@ fi
 $HOME/.bin/shuffle.py
 
 # PS1 Customization "~$ "
-#export PS1="\W\[\e[33;40m\]\\$\[\e[m\] "
-export PS1="\[\e[32;40m\]\W\[\e[m\]\[\e[36m\]\\$\[\e[m\] "
+export PS1="\[\e[1;49;32m\]\W\[\e[m\]\[\e[1;49;96m\]\\$\[\e[1;49;39m\] "
+#export PS1='\e[1;31;48;5;234m\u \e[38;5;240mon \e[1;38;5;28;48;5;234m\h \e[38;5;54m\d \@\e[0m\n\e[0;31;48;5;234m[\w] \e[1m\$\e[0m '

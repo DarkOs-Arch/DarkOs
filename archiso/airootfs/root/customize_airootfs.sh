@@ -117,14 +117,15 @@ function fixHibernateFunc() {
 function initkeysFunc() {
     pacman-key --init
     pacman-key --populate archlinux
+    pacman-key --populate darkos
     #pacman-key --populate arcolinux
     #pacman-key --keyserver hkps://hkps.pool.sks-keyservers.net:443 -r 74F5DE85A506BF64
     #pacman-key --keyserver hkp://pool.sks-keyservers.net:80 -r 74F5DE85A506BF64
     #pacman-key --lsign-key 74F5DE85A506BF64
-    pacman-key -r 93D1CCB2B2421F4B1CD0489774F5DE85A506BF64
-    pacman-key --lsign-key 93D1CCB2B2421F4B1CD0489774F5DE85A506BF64
-    pacman-key -r 447FE384AAE41F357F5876FF84263A08F86B7E99
-    pacman-key --lsign-key 447FE384AAE41F357F5876FF84263A08F86B7E99
+    #pacman-key -r 93D1CCB2B2421F4B1CD0489774F5DE85A506BF64
+    #pacman-key --lsign-key 93D1CCB2B2421F4B1CD0489774F5DE85A506BF64
+    #pacman-key -r 447FE384AAE41F357F5876FF84263A08F86B7E99
+    #pacman-key --lsign-key 447FE384AAE41F357F5876FF84263A08F86B7E99
     #sudo pacman-key --refresh-keys
 }
 
