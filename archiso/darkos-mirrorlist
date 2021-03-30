@@ -1,3 +1,0 @@
-# DarkOs Mirror List
-Server = https://darkos-arch.github.io/$repo/$arch
-Server = https://sourceforge.net/projects/darkos-repo/files/$repo/$arch
