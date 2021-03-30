@@ -1,0 +1,9 @@
+NAME=DarkOs
+PRETTY_NAME="DarkOs Linux"
+ID=darkos
+ID_LIKE="arch"
+VERSION_ID="Schmedding"
+ANSI_COLOR="38;2;23;147;209"
+HOME_URL="https://darkos-arch.sourceforge.io"
+SUPPORT_URL="https://darkos-arch.sourceforge.io"
+LOGO=darkos

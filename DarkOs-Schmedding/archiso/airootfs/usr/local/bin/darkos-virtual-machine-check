@@ -1,0 +1,16 @@
+#!/bin/bash
+# Author 	: 	Erik Dubois
+# Edited by ybenel
+result=$(systemd-detect-virt)
+if [ $result = "none" ];
+	then
+		if [ -f /etc/xdg/autostart/vboxclient.desktop ]; then
+   		rm /etc/xdg/autostart/vboxclient.desktop
+		fi
+
+		if pacman -Qi virtualbox-guest-utils &> /dev/null; then
+			pacman -Rns virtualbox-guest-utils --noconfirm
+		fi
+
+	  systemctl disable virtual-machine-check.service
+fi

@@ -1,0 +1,13 @@
+#!/bin/bash
+
+#Automount shared folders for virtualbox
+user=$( who | cut -d ' ' -f1 | uniq)
+sudo gpasswd -a $user vboxsf
+sudo systemctl enable vboxservice.service
+sudo systemctl start vboxservice.service
+echo "##############################################"
+echo "Now log out and log back in"
+echo "If you have set virtualbox to share a folder"
+echo "with automount, it will appear in the"
+echo "filemanager at next login"
+echo "##############################################"
