@@ -19,7 +19,7 @@ tput setaf 2;echo "Phase 4 : Moving files to build folder";tput sgr0
 echo "################################################################## "
 echo
 echo "Copying files and folder to build folder"
-sudo cp -r ../../DarkOs-Iso $buildFolder
+sudo cp -r ../../DarkOs-Plasma $buildFolder
 
 sudo chmod 750 $buildFolder/archiso/airootfs/etc/sudoers.d
 sudo chmod 750 $buildFolder/archiso/airootfs/etc/polkit-1/rules.d
