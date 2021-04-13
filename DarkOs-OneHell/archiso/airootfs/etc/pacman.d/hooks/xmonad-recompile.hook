@@ -1,0 +1,11 @@
+# Taken From https://github.com/arcolinux/arcolinux-xmonad-xmobar/blob/master/etc/pacman.d/hooks/recompile-xmonad.hook
+[Trigger]
+Operation = Upgrade
+Type = Package
+Target = xmonad*
+
+[Action]
+Description = Recompiling Xmonad now ...
+When = PostTransaction
+Depends = xmonad
+Exec = /bin/sh -c "runuser -l $( who | cut -d ' ' -f1 | uniq) -c 'xmonad --recompile'"

@@ -67,7 +67,7 @@ function createLiveUserFunc () {
 }
 
 function setDefaultsFunc() {
-    export _EDITOR=vim
+    export _EDITOR=nvim
     echo "EDITOR=${_EDITOR}" >> /etc/environment
     echo "EDITOR=${_EDITOR}" >> /etc/profile
 }
@@ -83,6 +83,7 @@ function fixPermissionsFunc() {
 }
 
 function enableServicesFunc() {
+    systemctl enable vmtoolsd.service
 	systemctl enable lightdm.service
 	systemctl set-default graphical.target
 	systemctl enable NetworkManager.service
@@ -118,19 +119,50 @@ function initkeysFunc() {
     pacman-key --init
     pacman-key --populate archlinux
     pacman-key --populate darkos
-    #pacman-key --populate arcolinux
-    #pacman-key --keyserver hkps://hkps.pool.sks-keyservers.net:443 -r 74F5DE85A506BF64
-    #pacman-key --keyserver hkp://pool.sks-keyservers.net:80 -r 74F5DE85A506BF64
-    #pacman-key --lsign-key 74F5DE85A506BF64
-    #pacman-key -r 93D1CCB2B2421F4B1CD0489774F5DE85A506BF64
-    #pacman-key --lsign-key 93D1CCB2B2421F4B1CD0489774F5DE85A506BF64
-    #pacman-key -r 447FE384AAE41F357F5876FF84263A08F86B7E99
-    #pacman-key --lsign-key 447FE384AAE41F357F5876FF84263A08F86B7E99
-    #sudo pacman-key --refresh-keys
 }
 
+function create_autorun() {
+    if [ -d /home/liveuser/.config/ ]; then
+        if [ ! -d /home/liveuser/.config/autostart/ ]; then
+            mkdir -p  /home/liveuser/.config/autostart/
+        fi
+    fi
+    cp /etc/xdg/autostart/calamares-darkos.desktop /home/liveuser/.config/autostart/
+    echo "#!/usr/bin/env bash" > /home/liveuser/.config/autostart/ustart.sh
+    echo "dex ~/.config/autostart/calamares-darkos.desktop" >> /home/liveuser/.config/autostart/ustart.sh
+    echo "if [ -f ~/.config/autostart/ustart.sh ]; then" >> /home/liveuser/.config/autostart/ustart.sh
+    echo "    rm -f ~/.config/autostart/ustart.sh" >> /home/liveuser/.config/autostart/ustart.sh
+    echo "fi" >> /home/liveuser/.config/autostart/ustart.sh
+    chmod +x /home/liveuser/.config/autostart/ustart.sh
+    chmod +x /usr/local/bin/xqp /usr/local/bin/setscreen.sh /usr/local/bin/config_userfix.sh /usr/local/bin/xmenu
+}
+
+
+function sed_stuff(){
+    echo "Reched This Part"
+    sed1="Exec=herbstluftwm"
+    sed_r1="Exec=herbstluftwm -l"
+    sed -i "s/$sed1/$sed_r1/g" /usr/share/xsessions/herbstluftwm.desktop
+    cat /usr/share/xsessions/herbstluftwm.desktop
+    echo "Finished"
+    cat /etc/pacman.conf
+}
+
+# function checkdarkos(){
+#     echo "Reached DarkOs"
+#     check=$(grep "DarkOs-Repo" /etc/pacman.conf)
+#     cat $check
+#     if [ -z $check ]; then
+#         echo "[DarkOs-Repo]" >> /etc/pacman.conf
+#         echo "SigLevel = Required DatabaseOptional" >> /etc/pacman.conf
+#         echo "Include = /etc/pacman.d/darkos-mirrorlist" >> /etc/pacman.conf
+#     fi
+#     cat /etc/pacman.conf
+#     echo "Done With CheckDarKos"
+# }
+
 function getNewMirrorCleanAndUpgrade() {
-    reflector --threads 50 -l 100 -f 100 --number 20 --sort rate --save /etc/pacman.d/mirrorlist
+    reflector --threads 25 -p "http,https" -l 50 -f 50 --number 50 --sort rate --save /etc/pacman.d/mirrorlist
     pacman -Sc --noconfirm
     pacman -Syyu --noconfirm
 }
@@ -163,5 +195,11 @@ fixHibernateFunc
 layout fixHibernateFunc
 initkeysFunc
 layout initkeysFunc
+create_autorun
+layout create_autorun
+sed_stuff
+layout sed_stuff
+# checkdarkos
+# layout checkdarkos
 getNewMirrorCleanAndUpgrade
 layout getNewMirrorCleanAndUpgrade

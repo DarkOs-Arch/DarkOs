@@ -8,12 +8,12 @@ echo "- Setting General parameters"
 tput sgr0
 echo "################################################################## "
 echo
-Edition="OneHell"
+Edition="Schmedding"
 DarkOsVersion='v9.1.1'
 isoLabel='DarkOs-'$Edition'-'$DarkOsVersion'-x86_64.iso'
 # setting of the general parameters
 archisoRequiredVersion="archiso 52-1"
-buildFolder=$HOME"/Builds/Build/OneHell"
+buildFolder=$HOME"/Builds/Build/Schmedding"
 outFolder=$HOME"/Builds/Iso"
 archisoVersion=$(sudo pacman -Q archiso)
 

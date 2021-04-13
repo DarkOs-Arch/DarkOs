@@ -1,4 +1,11 @@
 arch-install-scripts
+mkinitcpio
+mkinitcpio-archiso
+mkinitcpio-nfs-utils
+archiso
+syslinux
+memtest86+
+edk2-shell
 b43-fwcutter
 broadcom-wl
 btrfs-progs
@@ -78,7 +85,8 @@ wpa_supplicant
 wvdial
 xfsprogs
 xl2tpd
-
+licenses
+pciutils
 
 # extra packages
 alsa-firmware
@@ -86,13 +94,17 @@ alsa-lib
 alsa-plugins
 geoclue2
 lm_sensors
-lsb-release
+#lsb-release
 networkmanager
 pacman-contrib
 reflector
 terminus-font
 ttf-dejavu
+amd-ucode
+intel-ucode
 
 # DarkOs packages
 darkos-schmedding-installer
 darkos-keyring
+
+systemd-sysvcompat

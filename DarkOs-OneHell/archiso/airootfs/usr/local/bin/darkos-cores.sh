@@ -1,6 +1,5 @@
 #!/bin/bash
 #set -e
-# Maintainer: Ybenel <r2dr0dn@pm.me>
 
 numberofcores=$(grep -c ^processor /proc/cpuinfo)
 

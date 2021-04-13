@@ -1,7 +1,5 @@
-# Maintainer Ybenel (ybenel@molero.xyz)
-
 # Including Local Bin Tool In The Path
-PATH="$HOME/.local/bin:$PATH:/usr/bin/vendor_perl:/usr/bin/core_perl"
+PATH="$HOME/.local/bin:$PATH"
 
 # Setting Editor As NeoVim
 EDITOR="nvim"
@@ -143,6 +141,12 @@ ex ()
   fi
 }
 
+# Get Ip Addresses
+function ipc () {
+  curl ipinfo.io/$1
+}
+
+
 ### ALIASES ###
 
 # root privileges
@@ -192,6 +196,19 @@ alias pg='ping'   # Extra
 # Overwrite .Xresources To take effect of the new settings
 alias xd='xrdb ~/.Xresources'
 
+
+# Doom Emacs
+
+alias emax='
+export DISPLAY=:0.0
+export LIBGL_ALWAYS_INDIRECT=1
+setxkbmap -layout us
+setsid emacs
+exit
+'
+
+# Add A Special Env For My Laptop
+alias scv='LIBGL_ALWAYS_SOFTWARE=1'
 # adding flags
 alias cp="cp -i"                          # confirm before overwriting something
 alias df='df -h'                          # human-readable sizes
@@ -200,21 +217,19 @@ alias free='free -m'                      # show sizes in MB
 alias lynx='lynx -cfg=~/.lynx/lynx.cfg -lss=~/.lynx/lynx.lss -vikeys'
 alias vifm='./.config/vifm/scripts/vifmrun'
 
-# Hacking  Tools Shortcuts
-alias searchsploit='/opt/exploitdb/searchsploit'
-alias conx="dow && cd conx && sudo openvpn ybenel.ovpn"
-alias conx2="dow && cd conx && sudo openvpn Thm.ovpn"
-alias htb='doc && cd Sec/htb/'
-alias thm='doc && cd Sec/thm'
+# More Aliases 
+alias doc='cd ~/Documents'
+alias dow='cd ~/Downloads'
+alias ips="curl -s ifconfig.co | grep 'IP</span>:'| cut -d '<' -f 4 | sed 's/\/span>://'"
 
 # Awesome Screen Locker
-alias bls="betterlockscreen -u ~/Pictures/WallOne/Mandalorian4.jpg -l -t 'This Is The Way'"
+#alias bls="betterlockscreen -w /usr/share/backgrounds/archlinux/gritty.png -l -t 'Victory is Mine!'"
 
 #check vulnerabilities microcode
 alias microcode='grep . /sys/devices/system/cpu/vulnerabilities/*'
 
 #get fastest mirrors in your neighborhood
-alias mirror="sudo reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacman.d/mirrorlist"
+alias mirror="sudo reflector --threads 10 -f 30 -l 30 --sort rate --number 10 --verbose --save /etc/pacman.d/mirrorlist"
 
 #get the error messages from journalctl
 alias jctl="journalctl -p 3 -xb"
@@ -250,5 +265,3 @@ $HOME/.bin/shuffle.py
 export PS1="\[\e[1;49;32m\]\W \[\e[m\]\[\e[1;49;96m\]\\$\[\e[1;49;39m\] "
 #export PS1='\[\e[0m\]\[\e[48;5;236m\]\[\e[38;5;105m\]\u\[\e[38;5;105m\]@\[\e[38;5;105m\]\h\[\e[38;5;105m\] \[\e[38;5;221m\]\w\[\e[38;5;221m\]\[\e[38;5;105m\]\[\e[0m\]\[\e[38;5;236m\]\342\226\214\342\226\214\342\226\214\[\e[0m\]'
 #export PS1='\[\e[31;1;48;234m\]\u \[\e[38;5;240m\]on \[\e[1;38;5;28;48;234m\]\h \[\e[38;5;54m\]\d \@\[\e[0m\]\n\[\e[38;5;105m\][\W] \[\e[1m\]\$\e[0m\] '
-
-

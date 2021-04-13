@@ -1,4 +1,10 @@
 archiso
+mkinitcpio
+mkinitcpio-archiso
+mkinitcpio-nfs-utils
+memtest86+
+edk2-shell
+syslinux
 arch-install-scripts
 #b43-fwcutter
 bind-tools
@@ -80,6 +86,7 @@ wpa_supplicant
 wvdial
 xfsprogs
 xl2tpd
+systemd-sysvcompat
 
 
 ###xorg
@@ -136,11 +143,10 @@ base
 base-devel
 
 ###virtual box or vmware
-#open-vm-tools  this made it lag
-#virtualbox-guest-modules-arch
-#virtualbox-guest-utils
-virtualbox-host-modules-arch
-virtualbox
+open-vm-tools
+virtualbox-guest-utils
+#virtualbox-host-modules-arch
+#virtualbox
 linux-headers
 ###packages for dual boot
 os-prober
@@ -303,7 +309,7 @@ bash-completion
 catfish
 cronie
 dconf-editor
-#dex
+dex
 dmidecode
 #evince
 expac
@@ -334,7 +340,7 @@ iw
 jsoncpp
 libmtp
 laptop-detect
-lsb-release
+#lsb-release
 mlocate
 #nomacs
 # oh-my-zsh-git
@@ -343,7 +349,7 @@ p7zip
 playerctl
 polkit
 #polkit-gnome
-python2-dbus
+dbus-python
 python2-xdg
 #qt4
 qt5ct
@@ -378,29 +384,11 @@ zenity
 zsh
 zsh-completions
 zsh-syntax-highlighting
+haveged
 
 ###########################################################################
 #                           AUR Repos
 ###########################################################################
-
-## Hacking tools
-#nmap
-#wireshark-qt
-#sqlmap
-#smbclient
-#evillimiterc
-#crackmapexec
-#john
-#hashcat
-#hcxkeys
-#hcxtools
-#metasploit
-#airgeddon-git
-#aircrack-ng
-#exploitdb
-#wpscan
-#etc install , check arch repos
-
 
 # cursors
 breeze
@@ -435,7 +423,7 @@ inxi
 mintstick-git
 neofetch
 #numix-gtk-theme-git
-pamac-aur
+#pamac-aur
 #peek
 pulseaudio-equalizer-ladspa
 python-pyparted
@@ -446,6 +434,8 @@ urxvt-resize-font-git
 #wttr
 yad
 yay-bin
+intel-ucode
+amd-ucode
 
 ###########################################################################
 #                               GAMES
@@ -460,6 +450,7 @@ yay-bin
 ###########################################################################
 
 darkos-wallpapers
+archlinux-wallpaper
 darkos-calamares
 darkos-calamares-config
 darkos-system-startup
@@ -471,6 +462,7 @@ darkos-system-config
 darkos-lightdm
 darkos-keyring
 #darkos-personal -- This Sets Up Configurations Of Polybar - Xmonad - Xmobar - Awesome - Herbstluftwm ...
+darkos-hellconf
 darkos-polybar
 #lightdm-gtk-greeter-settings
 #lightdm-gtk-greeter
@@ -521,35 +513,14 @@ volumeicon
 
 
 
-###lx-applications
 #lxappearance
 lxappearance-gtk3
-#lxappearance-obconf
-#lxappearance-obconf-gtk3
-
-#lxrandr
-# thunar
-# thunar-volman
-#tumbler
-# thunar-archive-plugin
-# thunar-media-tags-plugin
-
-
-###########################################################################
-#                                ISO SPECIFIC
-###########################################################################
-
-#plasma-meta
-#systemd-kcm
-#dolphin-plugins
-#kde-system-meta
-#kde-utilities-meta
 cryfs
-
 
 ################################ Herbstluftwm , Awesome, Xmonad ####################
 herbstluftwm
 awesome
+xmobar
 xmonad
 xmonad-contrib
 xmonad-utils
@@ -559,13 +530,23 @@ xed
 #discord
 pcmanfm
 moc
-clementine
+#clementine
 celluloid
 tor
 torsocks
 nyx
 dnscrypt-proxy
 firejail
+mpd
+ncmpcpp
+unclutter
+xfce4-power-manager
+xscreensaver
+polkit-kde-agent
+dunst
+playerctl
+flameshot
+sxhkd
 
 ################### Stuff i use for production #####################
 #fluidsynth
