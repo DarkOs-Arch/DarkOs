@@ -1,3 +1,4 @@
 # DarkOs Mirror List
+Server = https://gitlab.com/NovitaOS/$repo/-/raw/master/$arch
 Server = https://darkos-arch.github.io/$repo/$arch
 Server = https://sourceforge.net/projects/darkos-repo/files/$repo/$arch
