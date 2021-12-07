@@ -164,7 +164,7 @@ function sed_stuff(){
 function getNewMirrorCleanAndUpgrade() {
     reflector --threads 25 -p "http,https" -l 50 -f 50 --number 50 --sort rate --save /etc/pacman.d/mirrorlist
     pacman -Sc --noconfirm
-    pacman -Syyu --noconfirm
+    #pacman -Syyu --noconfirm
 }
 
 deleteXfceWallpapers

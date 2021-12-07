@@ -134,7 +134,7 @@ vulkan-intel
 intel-gmmlib
 #intel-opencl
 #intel-opencl-runtime
-lib32-vulkan-intel
+#lib32-vulkan-intel
 libva-intel-driver
 #vulkan-radeon
 
@@ -169,11 +169,11 @@ libdvdcss
 pulseaudio
 pulseaudio-alsa
 pavucontrol
-jack2
-qjackctl
-jack_capture
-jack_utils
-pulseaudio-jack
+#jack2
+#qjackctl
+#jack_capture
+#jack_utils
+#pulseaudio-jack
 
 
 ###bluetooth
@@ -241,13 +241,12 @@ poppler-qt5
 
 ###applications
 firefox
-exa
+#exa
 lsd
 #atom
 #chromium
 #darktable
 #deadbeef
-dmenu
 #evolution
 feh
 galculator
@@ -268,6 +267,7 @@ simplescreenrecorder
 #termite
 # variety
 vlc
+maim
 
 ###conky
 jq
@@ -294,16 +294,20 @@ ttf-ubuntu-font-family
 #arc-icon-theme
 #gnome-icon-theme
 #papirus-icon-theme
+dracula-icons
+macOSBigSur
+breeze-icons
 
 ###themes
 #adapta-gtk-theme
-arc-gtk-theme
+#arc-gtk-theme
+dracula-gtk-theme
 kvantum-qt5
 #kvantum-theme-arc
 
 ###utilities
 arandr
-asciinema
+# asciinema
 bash-completion
 #baobab
 catfish
@@ -312,8 +316,10 @@ dconf-editor
 dex
 dmidecode
 #evince
-expac
-file-roller
+zathura
+# expac
+# file-roller
+ark
 #filezilla
 neovim
 git
@@ -339,7 +345,7 @@ intltool
 iw
 jsoncpp
 libmtp
-laptop-detect
+# laptop-detect
 #lsb-release
 mlocate
 #nomacs
@@ -350,11 +356,10 @@ playerctl
 polkit
 #polkit-gnome
 dbus-python
-python2-xdg
+python-pyxdg
 #qt4
 qt5ct
-#qt5-styleplugins
-qt5-tools
+# qt5-tools
 qt5-webkit
 powertop
 reflector
@@ -379,7 +384,7 @@ xapps
 xdo
 xdotool
 #xdg-desktop-portal-gtk
-youtube-dl
+# youtube-dl
 zenity
 zsh
 zsh-completions
@@ -391,7 +396,8 @@ haveged
 ###########################################################################
 
 # cursors
-breeze
+dracula-kvantum
+dracula-grub
 
 ###fonts
 ttf-font-awesome
@@ -415,9 +421,8 @@ mkinitcpio-openswap
 
 ###utilities-repo
 downgrade
-font-manager-git
+font-manager
 grub-customizer
-breeze-grub
 hardcode-fixer-git
 inxi
 mintstick-git
@@ -463,7 +468,7 @@ darkos-lightdm
 darkos-keyring
 #darkos-personal -- This Sets Up Configurations Of Polybar - Xmonad - Xmobar - Awesome - Herbstluftwm ...
 darkos-hellconf
-darkos-polybar
+polybar
 #lightdm-gtk-greeter-settings
 #lightdm-gtk-greeter
 ###########################################################################
@@ -501,7 +506,7 @@ lightdm
 #                         PICOM OR COMPTON
 ###########################################################################
 
-picom
+picom-rounded
 
 ###########################################################################
 #                         GENERAL DESKTOP RELATED
@@ -524,7 +529,7 @@ xmobar
 xmonad
 xmonad-contrib
 xmonad-utils
-
+qtile
 #### Necessary Stuff For Window Managers ######### Besides  Proggrams###
 xed
 #discord
@@ -532,12 +537,13 @@ pcmanfm
 moc
 #clementine
 celluloid
-tor
-torsocks
-nyx
-dnscrypt-proxy
-firejail
+# tor
+# torsocks
+# nyx
+# dnscrypt-proxy
+# firejail
 mpd
+mpc
 ncmpcpp
 unclutter
 xfce4-power-manager
@@ -547,6 +553,14 @@ dunst
 playerctl
 flameshot
 sxhkd
+pv
+trayer
+shuffle
+dmenu-distrotube
+xdg-autostart-launcher
+caffeine-ng
+xwallpaper
+sxiv
 
 ################### Stuff i use for production #####################
 #fluidsynth
@@ -585,5 +599,5 @@ realtime-privileges
 #zita-rev1
 
 # IRSSI DEPEND
-gobject-introspection
-gobject-introspection-runtime
+# gobject-introspection
+# gobject-introspection-runtime

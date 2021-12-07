@@ -9,12 +9,12 @@ tput sgr0
 echo "################################################################## "
 echo
 Edition="OneHell"
-DarkOsVersion='v9.1.1'
+DarkOsVersion='v9.2.1'
 isoLabel='DarkOs-'$Edition'-'$DarkOsVersion'-x86_64.iso'
 # setting of the general parameters
 archisoRequiredVersion="archiso 52-1"
-buildFolder=$HOME"/Builds/Build/OneHell"
-outFolder=$HOME"/Builds/Iso"
+buildFolder=$HOME"/DarkOs/Builds/Sys/OneHell"
+outFolder=$HOME"/DarkOs/Builds/Iso"
 archisoVersion=$(sudo pacman -Q archiso)
 
 echo "################################################################## "
